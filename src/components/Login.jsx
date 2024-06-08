@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 export const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -28,153 +27,76 @@ export const Login = () => {
   };
 
   return (
-    <div className="login-container content" title="Descargue la última versión para una mejor experiencia." > 
-      <form
-        className="el-form login-form el-form--label-top"
-        onSubmit={handleSubmit}
-        style={{ width: "100%" }}
-      >
-        {/*<div
-          className="content"
-          title="Descargue la última versión para una mejor experiencia."
-        >*/}
-         
-          <div className="login-welcome el-row">
-            <span title="Bienvenido/a" className="login-welcome-text">
-              Bienvenido/a
-            </span>
-            <div className="el-select language-select">
-              <span className="el-select__text">Español</span>
-              <div className="el-input el-input--suffix">
-                <input
-                  autoComplete="off"
-                  placeholder="Idioma"
-                  type="text"
-                  title="Español"
-                  className="el-input__inner"
-                  style={{ paddingRight: "32px" }}
-                  readOnly
-                />
-                <span className="el-input__suffix">
-                  <span className="el-input__suffix-inner">
-                    <i className="el-input__icon h-icon-angle_down_sm"></i>
-                  </span>
-                </span>
-              </div>
-            </div>
+    <div className="login-container content" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <form className="el-form login-form el-form--label-top" onSubmit={handleSubmit} style={{ width: '80%', margin: '0 auto', maxWidth: '400px', textAlign: 'center' }}>
+        <div className="login-welcome el-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px' }}>
+          <span title="Bienvenido/a" className="login-welcome-text" style={{ flexGrow: 1, textAlign: 'left' }}> <h1>Bienvenido/a</h1></span>
+          <select className="form-select" aria-label="Default select example" style={{ height: '35px', padding: '0 10px', width: '120px', textAlign: 'center' }}>
+            <option selected>Idioma</option>
+            <option value="1">Español</option>
+            <option value="2">English</option>
+            <option value="3">Français</option>
+          </select>
+        </div>
+        
+        <div className="form-floating mb-3">
+          <input
+            type="email"
+            className="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <label htmlFor="floatingInput">Email address</label>
+        </div>
+        
+        <div className="form-floating">
+          <input
+            type="password"
+            className="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <label htmlFor="floatingPassword">Password</label>
+        </div>
+
+        <div className="card-body" style={{ textAlign: 'left' }}>
+          <button
+            onClick={handleForgotPassword}
+            className="card-link card-link-button"
+            style={{ background: 'none', border: 'none', padding: 0, color: 'inherit', cursor: 'pointer', textDecoration: 'underline' }}
+          >
+            ¿Ha olvidado su contraseña?
+          </button>
+        </div>
+
+        <div className="el-form-item" style={{ marginBottom: '10px' }}>
+          <div className="el-form-item__content">
+            <button type="submit" className="el-button login-btn el-button--primary">
+              Iniciar sesión
+            </button>
           </div>
-          <div className="el-form-item">
-            <div className="el-form-item__content">
-              <div className="el-input el-input--prefix">
-                <input
-                  autoComplete="username"
-                  placeholder="Correo electrónico/Cuenta"
-                  type="text"
-                  id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  maxLength="128"
-                  className="el-input__inner"
-                  style={{ paddingLeft: "32px" }}
-                  required
-                />
-                <span className="el-input__prefix">
-                  <i className="el-input__icon login-icon-user"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="item-password el-form-item is-required-right">
-            <div className="el-form-item__content">
-              <div className="el-input el-input--suffix">
-                <input
-                  autoComplete="off"
-                  placeholder="Contraseña"
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="el-input__inner"
-                  style={{ paddingRight: "32px" }}
-                  required
-                />
-                <span className="el-input__suffix">
-                  <span className="el-input__suffix-inner">
-                    <i className="el-input__icon h-icon-password_unvisible"></i>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="card-body">
-            <div className="el-form-item__content">
-              <p className="register-btn">
-                &nbsp;
-                <button
-                  onClick={handleForgotPassword}
-                  style={{
-                    cursor: "pointer",
-                    color: "rgb(33, 150, 243)",
-                    background: "none",
-                    border: "none",
-                    padding: 0,
-                    font: "inherit",
-                    textDecoration: "underline",
-                  }}
-                >
-                  ¿Ha olvidado su contraseña?
-                </button>
-              </p>
-            </div>
-          </div>
-          <div className="el-form-item" style={{ marginBottom: "4px" }}>
-            <div className="el-form-item__content">
+        </div>
+
+        <div className="item-register el-form-item">
+          <div className="el-form-item__content">
+            <p className="register-btn">
+              ¿Aún no se ha registrado?&nbsp;
               <button
-                type="submit"
-                className="el-button login-btn el-button--primary"
+                onClick={handleRegister}
+                style={{ cursor: 'pointer', color: 'rgb(33, 150, 243)', background: 'none', border: 'none', padding: 0, font: 'inherit', textDecoration: 'underline' }}
               >
-                Iniciar sesión
+                Registrar
               </button>
-            </div>
+            </p>
           </div>
-          <div className="item-register el-form-item">
-            <div className="el-form-item__content">
-              <p className="register-btn">
-                ¿Aún no se ha registrado?&nbsp;
-                <button
-                  onClick={handleRegister}
-                  style={{
-                    cursor: "pointer",
-                    color: "rgb(33, 150, 243)",
-                    background: "none",
-                    border: "none",
-                    padding: 0,
-                    font: "inherit",
-                    textDecoration: "underline",
-                  }}
-                >
-                  Registrar
-                </button>
-              </p>
-            </div>
-          </div>
-          <div className="qr-code">
-            <div className="qr-code-div">
-              <img
-                src="Common/static/images/qrcode.svg"
-                className="android"
-                alt="QR Code"
-              />
-            </div>
-            <div className="qr-code-div-title">
-              <div className="title" title="Descargar aplicación">
-                Descargar aplicación
-              </div>
-            </div>
-          </div>
-       
+        </div>
       </form>
-     Descargue la última versión para una mejor experiencia.
     </div>
   );
 };

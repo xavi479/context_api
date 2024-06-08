@@ -101,16 +101,6 @@ body {
   width: 100%;  /* Toma todo el ancho de la página */
 }
 
-header {
-  background-color: black;
-  height: 80px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
-  width: 100%;  /* Asegura que tome todo el ancho */
-}
 
 .card-link-button {
   background: none;
@@ -143,4 +133,65 @@ header {
   color: blue;
   text-decoration: underline;
 }
+
+button.login-btn {
+  background-color: var(--bs-primary);
+  color: var(--button-text-color);
+  font-family: var(--font-primary);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.8s ease;
+}
+
+button.login-btn:hover {
+  background-color: var(--button-color-hover);
+}
+
+button.login-btn:active {
+  background-color: var(--button-color-active);
+}
+
+button.login-btn:disabled {
+  background-color: var(--button-color-disabled);
+  cursor: not-allowed;
+}
+.custom-navbar {
+  width: 200%;
+  max-width: 2000px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 1rem 2rem; /* Espaciado interno */
+  background-color: #343a40; /* Color de fondo oscuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Tamaño de la fuente del logo */
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.1rem; /* Tamaño de la fuente de los enlaces */
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+}
+
+.nav-link:hover {
+  background-color: #495057; /* Fondo al pasar el ratón por encima */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.navbar-toggler {
+  border: none; /* Sin borde para el botón */
+}
+
+.form-control {
+  border-radius: 0.5rem; /* Bordes redondeados para el campo de búsqueda */
+}
+
+.btn-outline-success {
+  border-radius: 0.5rem; /* Bordes redondeados para el botón */
+}
+
 
