@@ -1,0 +1,146 @@
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --background-color: #F6F4E9;
+  --text-color: #210803;
+  --text-color-light: #735d58;
+  --banner-background-color: #FF3500;
+  --banner-text-color: #F6F4E9;
+  --secondary-banner-background-color: #FFD6F8;
+  --secondary-banner-text-color: #FF3500;
+  --button-text-color: #F6F4E9;
+  --button-color: #6FB382;
+  --button-color-hover: #5A8F6F;
+  --button-color-active: #4C7B5A;
+  --button-color-disabled: #A3C6A9;
+  --switch-color: #FF3500;
+  --font-primary: 'Work Sans', sans-serif !important;
+  --menu-background: #fffefc;
+  --menu-background-grey-light: #f9f9f9;
+  --menu-background-grey-dark: #efefef;
+  --menu-background-highlight: #f8f5f1;
+  --menu-border: #d2c9bd;
+  --menu-text: #210803;
+  --menu-text-light: #735d58;
+  --menu-grey-dark: #999999;
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #3498db;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #e74c3c;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-icon-color-success);
+  --toastify-icon-color-warning: var(--toastify-icon-color-warning);
+  --toastify-icon-color-error: var(--toastify-icon-color-error);
+  --toastify-toast-width: 320px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: sans-serif;
+  --toastify-z-index: 9999;
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+  --toastify-color-progress-light: linear-gradient(
+    to right,
+    #4cd964,
+    #5ac8fa,
+    #007aff,
+    #34aadc,
+    #5856d6,
+    #ff2d55
+  );
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+body {
+  font-family: "segoe UI", "Microsoft YaHei", "Arial", "Helvetica", "sans-serif" !important;
+  color: #4d4d4d;
+  font-size: 14px;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  width: 100%;  /* Toma todo el ancho de la página */
+}
+
+header {
+  background-color: black;
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  width: 100%;  /* Asegura que tome todo el ancho */
+}
+
+.card-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.card-link-button:hover,
+.card-link-button:focus {
+  color: blue;
+  text-decoration: underline;
+}
+
+.card-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.card-link-button:hover,
+.card-link-button:focus {
+  color: blue;
+  text-decoration: underline;
+}
+
